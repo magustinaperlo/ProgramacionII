@@ -11,6 +11,7 @@
 precioMax = 120
 marca = 'Adidas'
 lista = [('nombrepProducto', 100, 2, 'Nike'),('nombreProducto', 120, 2, 'Nike'),('nombreProducto', 110, 2, 'Adidas')]
+#error de tipeo en index0 de la lista "nombrepProducto"
 lista2= []
 for i in lista:
     if i [1] <= precioMax and i [3] == marca:
@@ -29,7 +30,20 @@ while num_mes != 0:
         print('Error no hay mas de 12 meses')
     for i in meses:
         if meses.index(i) == num_mes:
-            print(i)         
+            print(i)   
+           
+  #sugerencia: 
+meses = ('', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Noviembre', 'Diciembre')
+num_mes = 1
+while num_mes != 0:
+    num_mes = int(input('Ingrese un número: '))
+    if num_mes == 0:
+        break
+    elif num_mes < 1 or num_mes > len(meses) - 1:
+        print('Error: El número está fuera del rango.')
+    else:
+        print(meses[num_mes])
+
 
 #Crea una tupla con números, pide al usuario un número por teclado e indica cuantas veces se
 #repite según lo halle en la tupla que has creado.
@@ -64,6 +78,18 @@ while True:
     else:
         (print(tupla[num_ingresado]))
         break
+        
+  #sugerencia: 
+tupla = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+try:
+    num_ingresado = int(input('Ingrese un índice: '))
+    if num_ingresado < 0 or num_ingresado >= len(tupla):
+        print('Error: Índice fuera de rango.')
+    else:
+        print(tupla[num_ingresado])
+except ValueError:
+    print('Error: Ingrese un número entero válido.')
+
     
 #Escribe un programa que solicite al usuario que ingrese una lista de números enteros.
 #El programa debe crear una tupla a partir de la lista y luego imprimir la tupla en orden inverso.
@@ -74,6 +100,8 @@ while cont < 10:
     ing_num = int(input('Ingresa un numero entero: '))
     lista_numeros.append(ing_num)
     cont += 1
-lista_mezclada = reversed(lista_numeros)
-tupla_numeros = tuple(lista_mezclada)
+#lista_mezclada = reversed(lista_numeros)
+#tupla_numeros = tuple(lista_mezclada)
+#podemos hacer todo en 1 sola linea:
+lista_mezclada = tuple(reversed(lista_numeros))
 print(tupla_numeros)

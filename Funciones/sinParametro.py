@@ -1,3 +1,4 @@
+#solo paso a dejar el mensajito de que tus funciones han sido visadas y están excelentes , no hay corrección ni sugerencias para aportar
 import random
 
 

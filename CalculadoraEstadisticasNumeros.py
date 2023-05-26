@@ -31,9 +31,14 @@ print(f'El promedio de los numeros ingresados es: {promedio}')
 
 print(f'El numero minimo de la lista es {min(numeros_lista)} y el numero maximo es {max(numeros_lista)}')
 
-cuadrado = sum((num - promedio)**2 for num in numeros_lista)
+cuadrado_lista = []
 
-varianza = cuadrado / len(numeros_lista)
+for num in numeros_lista:
+    diferencia = num - promedio
+    cuadrado = diferencia ** 2
+    cuadrado_lista.append(cuadrado)
+    
+varianza = sum(cuadrado_lista) / len(numeros_lista)
 
 desviacion_estandar = math.sqrt(varianza)
 
@@ -43,4 +48,4 @@ print('La desviacion estandar de los numeros es: ' + "{0:.2f}".format(float(desv
 
 desviacion_estandar2 = statistics.stdev(numeros_lista)
 
-print(f'La desviacion estandar calculada con la funcion es: {desviacion_estandar2}')
+print('La desviacion estandar calculada con la funcion es: ' + "{0:.2f}".format(float(desviacion_estandar2)))

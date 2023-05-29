@@ -49,3 +49,10 @@ print('La desviacion estandar de los numeros es: ' + "{0:.2f}".format(float(desv
 desviacion_estandar2 = statistics.stdev(numeros_lista)
 
 print('La desviacion estandar calculada con la funcion es: ' + "{0:.2f}".format(float(desviacion_estandar2)))
+
+#sugerencia para la última línea quizás más fácil de recordar: 
+
+print(f'La desviación estándar de los números es: {round(desviacion_estandar, 2)}')
+
+#round(desviacion_estandar, 2) redondea el valor de desviacion_estandar a 2 decimales. La función round() toma dos argumentos:
+#el número a redondear y la cantidad de decimales a los que se debe redondear.

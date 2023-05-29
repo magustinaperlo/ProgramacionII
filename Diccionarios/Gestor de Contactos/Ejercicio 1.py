@@ -63,3 +63,17 @@ while True:
             print('Gracias por usar el sistema, hasta la proxima.')
             break
                         
+                
+                
+#para utilizar la función nueva reemplazar tu opción 3 por el sig bloque: 
+
+elif opc == 3:
+    os.system('clear')
+    print('Ingresaste en la opción 3.\nEliminar un contacto\n')
+    eliminar = input('Ingresa el nombre del contacto a eliminar: ')
+
+    if contactoExiste(contactos, eliminar):
+        del contactos[eliminar]
+        print(f'El contacto {eliminar} ha sido eliminado.')
+    else:
+        print(f'El contacto {eliminar} no existe.')
